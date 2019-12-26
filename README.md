@@ -1,32 +1,45 @@
 PlantUML
 ========
-[![Build Status](https://travis-ci.org/plantuml/plantuml.png?branch=master)](https://travis-ci.org/plantuml/plantuml)
+[![Build Status](https://travis-ci.com/jrosiek/plantuml.svg?branch=dev)](https://travis-ci.com/jrosiek/plantuml)
 
 Generate UML diagram from textual description
 
-PlantUML is a component that allows to quickly write :
-
- * [Sequence diagram](http://plantuml.com/sequence-diagram),
- * [Use case diagram](http://plantuml.com/use-case-diagram),
- * [Class diagram](http://plantuml.com/class-diagram),
- * [Activity diagram](http://plantuml.com/activity-diagram-beta),
- * [Component diagram](http://plantuml.com/component-diagram),
- * [State diagram](http://plantuml.com/state-diagram),
- * [Object diagram](http://plantuml.com/object-diagram),
- * [Deployment diagram](http://plantuml.com/deployment-diagram),
- * [Timing diagram](http://plantuml.com/timing-diagram)
- 
-And also:
- * [Activity diagram (legacy syntax)](http://plantuml.com/activity-diagram-legacy)
- * [Archimate diagram](http://plantuml.com/archimate)
- * [Gantt charts](http://plantuml.com/gantt-diagram)
- * [SALT UI mockups](http://plantuml.com/salt)
-
-Furthermore:
- * [Hyperlinks and tooltips](http://plantuml.com/link)
- * [Creole](http://plantuml.com/creole): rich text, emoticons, unicode, icons
- * [OpenIconic icons](http://plantuml.com/openiconic)
- * [Sprite icons](http://plantuml.com/sprite)
- * [AsciiMath mathematical expressions](http://plantuml.com/ascii-math)
-
 To know more about PlantUML, please visit http://plantuml.com/
+
+This repository is a fork of the official PlantUML GitHub repository at [plantuml/plantuml](https://github.com/plantuml/plantuml). 
+The changes you can find here are mostly about:
+
+* Writing automated tests for various parts of the PlantUML
+* Necessary code refactorings to make writing tests possible
+* Bug fixes and minor functionality improvements
+* Modernisation of the codebase
+  * Java >=1.8
+  * No more Ant as a build tool
+
+You might have noticed many corner cases and
+inconsistencies in the syntax and behaviour of the tool 
+if you are a hardcore user of PlantUML as me. 
+It's not that big surprise if you consider there are no automated tests 
+in the original PlantUML source code (at least no publicly available tests). 
+This fork is intended to make some improvements in this regard. 
+It would be great to have it integrated into the official repo. 
+
+I am more than happy to accept contributions if you are interested in this type of work.  
+
+## Repository organisation
+
+* `master` - default branch. It is supposed to be in sync with `dev` and contain updated README.md that you are just reading. 
+* `dev` - here the work is integrated. Pull requests should be submitted against this repo. 
+* _feature branches_
+
+## Roadmap
+
+### Planned
+
+- [ ] Adding support for writing tests
+- [ ] Tests for the first stage of processing (preprocessor).
+
+### Backlog 
+
+- Tests for diagram parsers
+- Tests for diagram generators
